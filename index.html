@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INDORAPET - Toko Sembako Grosir & Eceran</title>
+    <meta name="description"
+        content="Toko sembako murah, lengkap, dan terpercaya. Beras, minyak goreng, gula, telur segar siap antar langsung ke rumah Anda. Belanja hemat di Indorapet!">
+
+    <link rel="icon" type="image/svg+xml" href="images/indorapet_logo.svg" />
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- 1. TOP ANNOUNCEMENT BAR -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-left">
+                <span class="promo-badge">PROMO</span>
+                <span class="promo-text">
+                    🎉 Gratis Ongkir belanja min. Rp 75.000! Gunakan voucher <span class="voucher-code"
+                        id="voucherTag">HEMAT10</span> diskon 10%
+                </span>
+            </div>
+            <div class="top-bar-right">
+                <span class="info-item"><i class="fa-regular fa-clock"></i> Buka 06.00 - 22.00 WIB</span>
+                <a href="https://wa.me/628563842046" target="_blank" class="info-item cs-link">
+                    <i class="fa-brands fa-whatsapp"></i> CS: 0856-3842-046
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. MAIN NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <!-- Brand Logo -->
+            <a href="#" class="logo">
+                <img src="images/indorapet_logo.png" alt="Logo Indorapet" class="brand-logo-img" />
+                <div class="logo-text-group">
+                    <div class="brand-title">Ind<span class="brand-o">o</span>rapet</div>
+                    <div class="brand-sub">Toko Sembako Grosir & Eceran</div>
+                </div>
+            </a>
+
+            <!-- Search Bar -->
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="searchInput"
+                    placeholder="Cari beras, minyak, telur, bumbu dapur, sabun cuci, mie, kopi..." autocomplete="off" />
+                <button type="button" id="clearSearchBtn" class="clear-search-btn" title="Hapus pencarian"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="nav-actions">
+                <a href="https://wa.me/628563842046?text=Halo%20Admin%20Indorapet,%20saya%20ingin%20tanya%20produk%20sembako"
+                    target="_blank" class="btn-chat-kasir">
+                    <i class="fa-regular fa-comment-dots"></i>
+                    <span>Chat Kasir</span>
+                </a>
+                <button class="cart-pill-btn" id="openCartBtn" aria-label="Buka Keranjang">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Keranjang</span>
+                    <span class="cart-pill-badge" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. MAIN CONTENT -->
+    <main>
+        <!-- HERO BANNER -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-card">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <i class="fa-solid fa-bolt"></i> PESTA SEMBAKO MURAH
+                        </div>
+                        <h1 class="hero-title">
+                            Penuhi Dapur Anda<br>
+                            Lebih Hemat &amp; Lengkap!
+                        </h1>
+                        <p class="hero-desc">
+                            Beras pulen, minyak goreng murni, telur ayam segar, bumbu masak, dan aneka mie instan siap
+                            diantar langsung ke depan pintu rumah Anda.
+                        </p>
+                        <div class="hero-action-row">
+                            <a href="#katalog" class="hero-btn-primary">
+                                <i class="fa-solid fa-bag-shopping"></i> Belanja Sekarang
+                            </a>
+                            <div class="hero-guarantee-badge">
+                                <span class="check-icon-circle"><i class="fa-solid fa-check"></i><i
+                                        class="fa-solid fa-star small-star"></i></span>
+                                <span>Garansi Kualitas 100% Asli</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-decoration">
+                        <div class="glow-orb orb-1"></div>
+                        <div class="glow-orb orb-2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALUE PROPOSITION HIGHLIGHTS -->
+        <section class="features-section">
+            <div class="features-container">
+                <div class="feature-card">
+                    <div class="feature-icon bg-green-light">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h4>Antar Cepat</h4>
+                        <p>Kirim instan hari ini ke rumah Anda</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon bg-yellow-light">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h4>Harga Grosir</h4>
+                        <p>Harga hemat langsung distributor</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon bg-blue-light">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h4>Bisa COD</h4>
+                        <p>Bayar tunai aman di tempat saat tiba</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon bg-red-light">
+                        <i class="fa-solid fa-shield-heart"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h4>Produk Segar</h4>
+                        <p>Jaminan segar, asli &amp; bersegel</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KATALOG PRODUK -->
+        <section class="catalog-section" id="katalog">
+            <div class="section-header">
+                <div class="header-titles">
+                    <span class="section-tag"><i class="fa-solid fa-store"></i> KATALOG LENGKAP</span>
+                    <h2>Daftar Produk Sembako Pilihan</h2>
+                    <p>Pilih kebutuhan harian dapur Anda dengan harga paling terjangkau</p>
+                </div>
+                <!-- Kategori Buttons -->
+                <div class="categories-bar" id="categoryBar">
+                    <button class="cat-pill active" data-category="all">
+                        <i class="fa-solid fa-border-all"></i> Semua Produk
+                    </button>
+                    <button class="cat-pill" data-category="beras">
+                        <i class="fa-solid fa-seedling"></i> Beras & Telur
+                    </button>
+                    <button class="cat-pill" data-category="minyak">
+                        <i class="fa-solid fa-bottle-droplet"></i> Minyak & Margarin
+                    </button>
+                    <button class="cat-pill" data-category="gula">
+                        <i class="fa-solid fa-cube"></i> Gula & Tepung
+                    </button>
+                    <button class="cat-pill" data-category="bumbu">
+                        <i class="fa-solid fa-pepper-hot"></i> Bumbu Dapur
+                    </button>
+                    <button class="cat-pill" data-category="instan">
+                        <i class="fa-solid fa-bowl-food"></i> Mie & Minuman
+                    </button>
+                    <button class="cat-pill" data-category="kebersihan">
+                        <i class="fa-solid fa-soap"></i> Sabun & Kebersihan
+                    </button>
+                    <button class="cat-pill" data-category="paket">
+                        <i class="fa-solid fa-gift"></i> Paket Hemat
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="productGrid">
+                <!-- Diisi via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 4. SIDEBAR KERANJANG BELANJA -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar" aria-label="Keranjang Belanja">
+        <div class="cart-header">
+            <div class="cart-header-title">
+                <div class="cart-header-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <div>
+                    <h3>Keranjang Belanja</h3>
+                    <span class="cart-item-count-sub" id="cartItemCountSub">0 item dipilih</span>
+                </div>
+            </div>
+            <button id="closeCartBtn" class="close-btn" aria-label="Tutup Keranjang">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <!-- Free Ongkir Progress Tracker -->
+        <div class="ongkir-banner">
+            <div class="ongkir-text" id="ongkirText">
+                <i class="fa-solid fa-truck-ramp-box"></i> Belanja <span id="ongkirRemaining">Rp 75.000</span> lagi
+                untuk <b>Gratis Ongkir!</b>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="ongkirProgress" style="width: 0%;"></div>
+            </div>
+        </div>
+
+        <!-- Item list -->
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart-msg">
+                <div class="empty-icon"><i class="fa-solid fa-basket-shopping"></i></div>
+                <h4>Keranjang Masih Kosong</h4>
+                <p>Yuk pilih sembako kebutuhan dapur Anda sekarang!</p>
+            </div>
+        </div>
+
+        <!-- Voucher Input -->
+        <div class="voucher-box">
+            <div class="voucher-input-wrap">
+                <i class="fa-solid fa-ticket"></i>
+                <input type="text" id="voucherInput" placeholder="Ketik kode promo (misal: HEMAT10)" />
+                <button type="button" id="applyVoucherBtn">Pakai</button>
+            </div>
+            <div id="voucherMessage" class="voucher-msg"></div>
+        </div>
+
+        <!-- Cart Summary Footer -->
+        <div class="cart-footer">
+            <div class="summary-line">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">Rp 0</span>
+            </div>
+            <div class="summary-line discount-line" id="discountRow" style="display: none;">
+                <span>Diskon Promo (<span id="discountPercent">10%</span>):</span>
+                <span id="cartDiscount">- Rp 0</span>
+            </div>
+            <div class="summary-line total-line">
+                <span>Total Belanja:</span>
+                <strong id="cartTotal">Rp 0</strong>
+            </div>
+
+            <button class="btn-checkout" id="checkoutBtn">
+                <i class="fa-brands fa-whatsapp"></i> Pesan via WhatsApp
+            </button>
+            <p class="checkout-note"><i class="fa-solid fa-lock"></i> Pesanan dikirim langsung ke WhatsApp toko kami</p>
+        </div>
+    </aside>
+
+    <!-- 5. TOAST NOTIFICATION -->
+    <div id="toastNotification" class="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMessage">Produk ditambahkan ke keranjang!</span>
+    </div>
+
+    <!-- 6. FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col col-brand">
+                <div class="footer-logo">
+                    <img src="images/indorapet_logo.png" alt="Logo Indorapet" class="footer-logo-img" />
+                    <span class="footer-brand-name">Ind<span class="brand-o">o</span>rapet</span>
+                </div>
+                <p class="brand-desc">
+                    Pusat belanja sembako terpercaya dengan harga grosir &amp; eceran terbaik. Kami menjamin kualitas
+                    beras pulen, minyak goreng murni, dan bahan pokok selalu baru setiap hari.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/628563842046" target="_blank" aria-label="WhatsApp"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Kategori Produk</h4>
+                <ul>
+                    <li><a href="#katalog"><i class="fa-solid fa-angle-right"></i> Beras Pulen Pilihan</a></li>
+                    <li><a href="#katalog"><i class="fa-solid fa-angle-right"></i> Minyak Goreng & Margarin</a></li>
+                    <li><a href="#katalog"><i class="fa-solid fa-angle-right"></i> Gula Pasir & Tepung</a></li>
+                    <li><a href="#katalog"><i class="fa-solid fa-angle-right"></i> Bumbu Dapur & Masak</a></li>
+                    <li><a href="#katalog"><i class="fa-solid fa-angle-right"></i> Aneka Mie & Minuman</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Layanan & Kontak</h4>
+                <div class="contact-info">
+                    <p><i class="fa-solid fa-location-dot"></i> Jl. Raya Pasar Anyar No. 88, Sidoarjo - Jawa Timur</p>
+                    <p><i class="fa-brands fa-whatsapp"></i> +62 856-3842-046</p>
+                    <p><i class="fa-regular fa-envelope"></i> order@indorapet.com</p>
+                    <p><i class="fa-solid fa-truck-pickup"></i> Pengiriman: Sameday &amp; Instan</p>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Jam Operasional</h4>
+                <div class="operating-hours">
+                    <div class="hours-item">
+                        <span>Senin - Sabtu:</span>
+                        <strong>06.00 - 22.00 WIB</strong>
+                    </div>
+                    <div class="hours-item">
+                        <span>Minggu & Hari Libur:</span>
+                        <strong>06.00 - 22.00 WIB</strong>
+                    </div>
+                </div>
+                <div class="payment-methods">
+                    <span>Metode Pembayaran:</span>
+                    <div class="payment-badges">
+                        <span class="p-badge"><i class="fa-solid fa-money-bill-wave"></i> Tunai (COD)</span>
+                        <span class="p-badge"><i class="fa-solid fa-qrcode"></i> QRIS</span>
+                        <span class="p-badge"><i class="fa-solid fa-building-columns"></i> Transfer Bank</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 <strong>INDORAPET</strong> Toko Sembako Grosir &amp; Eceran. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
