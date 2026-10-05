@@ -1,5 +1,5 @@
 const fs = require('fs');
-const pngBuf = fs.readFileSync('d:/sembako indorapet/images/indorapet_logo.png');
+const pngBuf = fs.readFileSync('d:/sembako indorapet/images/indorapet_logo.jpg');
 const b64 = pngBuf.toString('base64');
 
 const svgContent = `<?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -15,7 +15,7 @@ const svgContent = `<?xml version="1.0" encoding="UTF-8" standalone="no"?>
      width="488"
      height="166"
      preserveAspectRatio="xMidYMid meet"
-     xlink:href="data:image/png;base64,${b64}" />
+     xlink:href="data:image/jpeg;base64,${b64}" />
 </svg>
 `;
 
